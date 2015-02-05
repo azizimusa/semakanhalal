@@ -1,0 +1,39 @@
+<ion-view view-title="Semak Halal">
+  <!-- <div class="bar bar-subheader bar-dark">
+    <form ng-submit="submit()">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" ng-model="form.product" placeholder="Search product...">
+        </label>
+        <button class="button button-small">
+          Submit
+        </button>
+      </div>
+    </form>
+
+  </div> -->
+  <form ng-submit="submit()">
+  <div class="bar bar-subheader bar-dark item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios7-search placeholder-icon"></i>
+      <input type="search" ng-model="form.product" placeholder="Search product...">
+    </label>
+    <button class="button button-small button-positive">Search</button>
+  </div>
+</form>
+
+  <ion-content class="content-main has-subheader">
+    <ion-list ng-repeat="list in listing">
+      <ion-item ng-href="#/app/details/{{$index}}" ng-if="listing.length">
+        {{list.title}} <br/>
+        <h4>Brand : {{list.brand}}</h4>
+        <span class="item-note" ng-if="list.expiry_date.length"> Expiry {{list.expiry_date}}</span>
+      </ion-item>
+    </ion-list>
+
+    <ion-list ng-if="!listing">
+      <ion-item> {{status}} </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,11 @@
+{
+  "name": "Semak Halal",
+  "email": "azizimusa@azizi2u.com",
+  "app_id": "azizi.app.semakhalal",
+  "proxies": [
+    {
+      "path": "/halal",
+      "proxyUrl": "http://azizi2u.com/halal"
+    }
+  ]
+}

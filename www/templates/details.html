@@ -1,0 +1,33 @@
+<ion-view view-title="Maklumat">
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap" ng-cloak>
+        {{productDetails.details[0].company}} <br />
+        {{productDetails.details[0].address}} <br />
+        {{productDetails.details[0].phone}} <br />
+        {{productDetails.details[0].fax}} <br />
+        {{productDetails.details[0].website}} <br />
+        {{productDetails.details[0].email}} <br />
+        {{productDetails.details[0].reference_no}}
+      </div>
+    </div>
+
+    <div class="list padding">
+
+      <div class="item item-divider">
+        Products Listing
+      </div>
+
+      <div class="item" ng-repeat="list in productDetails.products" ng-if="productDetails.products.length">
+        {{list.name}} <br />
+        <h4>Brand : {{list.brand}}</h4>
+        <span class="item-note"> Expiry {{list.expiry_date}}</span>
+      </div>
+
+      <div class="item" ng-if="!productDetails.products">
+        {{productStatus}}
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>
