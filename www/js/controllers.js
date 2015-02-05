@@ -35,6 +35,18 @@ angular.module('halalApp.controllers', [])
 
   $rootScope.show();
 
+  $scope.currentUrl = $rootScope.listing[$stateParams.url].url;
+
+  $scope.appBrowser = function(){
+    var options = {
+      location: 'yes',
+      clearcache: 'yes',
+      toolbar: 'no'
+    };
+
+    window.open($scope.currentUrl, '_blank', 'location=yes', 'toolbar=no');
+  }
+
   action.detail($rootScope.listing[$stateParams.url].url).then(function(response){
     $scope.productDetails = response.data;
 

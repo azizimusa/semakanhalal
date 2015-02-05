@@ -1,16 +1,35 @@
 <ion-view view-title="Maklumat">
   <ion-content>
-    <div class="card">
-      <div class="item item-text-wrap" ng-cloak>
+    <div class="list card" ng-cloak>
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-home"></i>
         {{productDetails.details[0].company}} <br />
         {{productDetails.details[0].address}} <br />
-        {{productDetails.details[0].phone}} <br />
-        {{productDetails.details[0].fax}} <br />
-        {{productDetails.details[0].website}} <br />
-        {{productDetails.details[0].email}} <br />
+      </a>
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios7-telephone"></i>
+        {{productDetails.details[0].phone}}
+      </a>
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-paperclip"></i>
+        {{productDetails.details[0].fax}}
+      </a>
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-paper-airplane"></i>
+        {{productDetails.details[0].website}}
+      </a>
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-email"></i>
+        {{productDetails.details[0].email}}
+      </a>
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-pound"></i>
         {{productDetails.details[0].reference_no}}
-      </div>
+      </a>
+
     </div>
+
+        <button class="button button-balanced button-block" ng-click="appBrowser()">Semak kesahihan data</button>
 
     <div class="list padding">
 
